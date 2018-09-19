@@ -28,7 +28,7 @@ def _feature_select(graph_collector):
 
     # Calculate eigenvalues for each graph
     eigvals = [_calculate_eigenvalues(G[0]) for G in edgelists]
-    filelist
+    filelist = [_calculate_eigenvalues(G[1]) for G in edgelists]
     len_eig = [len(row) for row in eigvals]
     cutoff = len_eig[np.argmax(np.bincount(len_eig))]
 
