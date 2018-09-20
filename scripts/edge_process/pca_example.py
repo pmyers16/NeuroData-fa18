@@ -1,5 +1,5 @@
 ### IMPORTS ###
-# 3rd parts
+# 3rd party inputs
 import numpy as np
 import networkx as nx
 from sklearn.decomposition import PCA

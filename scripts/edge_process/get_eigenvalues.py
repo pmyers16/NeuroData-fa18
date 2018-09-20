@@ -1,10 +1,16 @@
 ### IMPORTS ###
+
 # 3rd party
 from networkx import normalized_laplacian_matrix
 import numpy as np
 
 # Local
-from edge_fetch import edge_terrier
+import sys
+path = '/Users/vivek/Documents/GitHub/ndd-2018/scripts'
+if sys.path[0] != path:
+    sys.path.insert(0, path)
+print(path)
+from edge_process.edge_fetch import edge_terrier
 
 
 ### CODE ###

@@ -7,9 +7,6 @@ import requests
 import numpy as np
 import networkx as nx
 
-# Pretty test prints
-import pprint
-import matplotlib.pyplot as plt
 
 ### CODE ###
 class edge_terrier():
