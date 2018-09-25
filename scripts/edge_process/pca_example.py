@@ -6,7 +6,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 # Local
-from get_eigenvalues import calc_eigval_feature_matrix
+from laplacian_eigvals import calc_eigval_feature_matrix
 
 
 ### CODE ###
