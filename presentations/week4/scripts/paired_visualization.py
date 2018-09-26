@@ -1,7 +1,6 @@
 from load_embeddings import emb
 
 import os
-import numpy
 import matplotlib.pyplot as plt
 
 
