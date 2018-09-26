@@ -71,7 +71,11 @@ if __name__ == '__main__':
         G, filename = graph
         filename = filename.split('.')[0]
         plt.title(filename.split('.')[0])
-        nx.draw(G, node_size=50, with_labels=False,
-                alpha=0.75, width=0.05, font_size=10)
 
-        plt.savefig('./figures/{}-nxgraph.png'.format(filename), dpi=500)
+        adj = nx.to_numpy_matrix(G)
+        print(adj)
+        plt.imshow(adj)
+        plt.colorbar()
+        # plt.show()
+
+        plt.savefig('./figures/{}-edglist-image.png'.format(filename), dpi=500)

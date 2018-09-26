@@ -1,4 +1,4 @@
-from load_embeddings import emb
+from load_embedding import emb
 
 import os
 import matplotlib.pyplot as plt
@@ -16,6 +16,7 @@ def main():
     emb3 = emb(filepath + filelist[2])
 
     # Let's see some plots
+    plt.figure(figsize=(16.1803398875/1.5, 10/1.5))
     plt.scatter(x=emb1.data[:, 1], y=emb1.data[:, 2], label=emb1.filename)
     plt.scatter(x=emb2.data[:, 1], y=emb2.data[:, 2], label=emb2.filename)
     plt.scatter(x=emb3.data[:, 1], y=emb3.data[:, 2], label=emb3.filename)
@@ -30,6 +31,8 @@ def main():
         plt.plot(x_, y_, 'k--', alpha=0.25)
 
     plt.legend()
+
+    plt.savefig('./figures/multiple_embddings.png', dpi=500)
     plt.show()
 
 
