@@ -1,0 +1,26 @@
+One-Sentence Overview:
+Turn embedded edgelists into features.
+
+
+Deliverables:
+1. Tensor of distances
+    - defined as T_{i,j,k=node} =  ||\vec{G_i}(k)  - \vec{G_j}(k)||, were G_i is the embedding of the i-th edgelist
+
+
+Pseudocode:
+    - How to generate distance tensor
+        for node:
+          for 
+
+
+Questions to answer:
+    1. What do the axes of the struc2vec embedding mean?
+    2. How would you describe the space
+
+
+Interesting things to look at:
+    1. Read SMART goals to help define a DoD
+        - Key point: "measurable"
+            * How can you measure the level of contribution a tensor decomp makes?
+                - Cluster extracted features (not a quantitative measurement)
+                -
