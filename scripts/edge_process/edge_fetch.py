@@ -4,7 +4,6 @@ import subprocess
 import requests
 
 # Data structure
-import numpy as np
 import networkx as nx
 
 
@@ -36,7 +35,7 @@ class edge_terrier():
         # Fetch edgelist
         link = 'http://neurodatadesign.s3.amazonaws.com/' + self.filepath + filename
         edges = requests.get(link).text.split()
-        edges = np.array([int(x) for x in edges])
+        edges = [int(x) for x in edges]
         edges = [tuple(edges[x:x + 3]) for x in range(0, len(edges), 3)]
 
         if edges == []:

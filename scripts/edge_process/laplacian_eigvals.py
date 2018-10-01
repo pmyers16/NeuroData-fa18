@@ -23,7 +23,7 @@ def _get_edgelists(filepath):
 def _calculate_eigenvalues(G):
     # Return eigenvalues of the Laplacian
     L = normalized_laplacian_matrix(G)
-    e = np.linalg.eigvals(L.A)
+    e = list(np.linalg.eigvals(L.A))
     return e
 
 def _feature_select(graph_collector):
@@ -49,4 +49,5 @@ def _feature_select(graph_collector):
 def calc_eigval_feature_matrix(filepath='hbn/derivatives/graphs/JHU/'):
     graph_collector = _get_edgelists(filepath)
     X = _feature_select(graph_collector)
+    X = np.asarray(X)
     return X
