@@ -28,9 +28,8 @@ class emb():
                     line = [float(x) for x in line]
                     data.append(line)
 
-        data = np.array(data)
-
         # Sort array by 0th column
+        data = np.array(data)
         data = data[data[:, 0].argsort()]
 
         return data
