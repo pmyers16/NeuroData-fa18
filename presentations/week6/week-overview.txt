@@ -1,0 +1,16 @@
+The big question of the week:
+"Are the representations learned by struc2vec aligned?"
+
+
+
+Things to do:
+1. Fix the goal on GitHub
+2. Run TensorLy on the adjacency matrix
+3.
+
+
+Presentation outline:
+- Present one experiment for week (the most INTERESTING result)
+- Make the first slide a pseudocode introduction of what you did
+- Next slide: present the results of the experiment
+- Major emphasis on explanations 

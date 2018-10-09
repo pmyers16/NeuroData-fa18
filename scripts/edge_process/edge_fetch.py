@@ -33,7 +33,7 @@ class edge_terrier():
     def convert_edgelist(self, filename, draw_graph=False):
 
         # Fetch edgelist
-        link = 'http://neurodatadesign.s3.amazonaws.com/' + self.filepath + filename
+        link = 'http://mrneurodata.s3.amazonaws.com/' + self.filepath + filename
         edges = requests.get(link).text.split()
         edges = [int(x) for x in edges]
         edges = [tuple(edges[x:x + 3]) for x in range(0, len(edges), 3)]
