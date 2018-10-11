@@ -40,7 +40,8 @@ class edge_terrier():
 
         if edges == []:
             print(filename + ' is empty.')
-            return
+            G = None
+            return G, filename
 
         # Convert edgelist to networkx object
         G = nx.Graph()
@@ -55,7 +56,6 @@ class edge_terrier():
     def convert_edgelist_all(self):
         # returns a generator of all filelists
         for filename in self.filelist:
-            print(f)
-            G = self.convert_edgelist(filename)
+            G, filename = self.convert_edgelist(filename)
             if G is not None:
                 yield G
