@@ -1,0 +1,23 @@
+Week 7
+October 11, 2018 - October 17, 2018
+
+Week 6 recap:
+  - Read paper on scan statistics: https://link.springer.com/article/10.1007/s10588-005-5378-z
+    - Basic idea of scan statistics:
+      - Get all vertices in the k-hop neighborhood of a vertex u
+      - Compute a statistic on the induced subgraph
+        - The statistic I calculated was k-locality:
+          - Defined as the cardinality of the edge set of the subgraph of vertex u
+      - A scan statistic is the statistic that is calculated across all vertices in the graph
+
+  - Implemented scan statistics in Python (networkx)
+  - Made embedding of graph that maps each vertex to its (1-locality, 2-locality)
+
+
+Week 7 Goals:
+  - Turn the multiple embeddings into feature matrix
+  - Run clustering on the data
+  - Get labels for age and sex
+    - Clustering on sex
+    - Regression on age
+    
