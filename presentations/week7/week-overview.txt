@@ -16,8 +16,25 @@ Week 6 recap:
 
 Week 7 Goals:
   - Turn the multiple embeddings into feature matrix
+  - Sum edge weights to get weighted k-locality
+
   - Run clustering on the data
   - Get labels for age and sex
     - Clustering on sex
     - Regression on age
-    
+
+Things to ask jovo:
+  - Are the edge weights in the HBN data consistent across graphs (i.e. does an edge weight of 2000 mean the same thing in two different patients)?
+    - Weights are counts of number of fibers between one region and another
+    - You can't calibrate this metric though
+      - Jovo recommends using pass-to-ranks on the graph
+        - Mitigates the batch effect across patients
+
+  - What are the patient privacy rules for this data?
+
+
+Jovo's comments:
+  - The pipeline for generating features might belong in ndmg
+  - "Group level analysis"
+  - Sprint 1 DoD: PR into ndmg for doing group level analysis
+  

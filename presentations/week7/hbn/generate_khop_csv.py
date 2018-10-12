@@ -9,7 +9,8 @@ from edge_fetch import edge_terrier
 
 def khop_locality(G, filename):
 
-    subject_id = filename.split('_')[0]
+    subject_id = filename.split('_')[0].split('-')[1]
+    print(subject_id)
     embed = [subject_id]
 
     for node in G.nodes:
@@ -37,7 +38,17 @@ if __name__ == '__main__':
         if embed is not None:
             M.append(embed)
 
-    # Save to csv
+    # Convert to df
     df = pd.DataFrame.from_records(M)
-    df.columns = ['id'] + list(range(96))
-    df.to_csv('khop.csv', index=False)
+    df.columns = ['EID'] + list(range(96))
+
+    # Get phenotypic data
+    phenotypic = pd.read_csv('phenotypic.csv').loc[:,['EID', 'Sex', 'Age']]
+
+    # Make single df
+    df = pd.merge(phenotypic, df, how='inner', on=['EID'])
+    df.columns = ['id', 'sex', 'age'] + list(range(96))
+    df['sex'] = df['sex'].map({'F': 1, 'M': 0})
+
+    # Save to csv
+    df.to_csv('klocality_with_age-sex.csv', index=False)
