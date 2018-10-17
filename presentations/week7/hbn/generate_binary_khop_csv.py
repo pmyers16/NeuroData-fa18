@@ -1,7 +1,5 @@
-import numpy as np
 import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as plt
 
 # Personal function for loading edgelists off the S3 bucket
 from edge_fetch import edge_terrier
